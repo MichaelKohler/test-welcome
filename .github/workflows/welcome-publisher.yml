@@ -1,0 +1,53 @@
+name: Welcome publisher
+
+on:
+  pull_request:
+    types:
+      - opened
+  issues:
+    types:
+      - opened
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greeting:
+    name: Greet First-Time Contributors
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/first-interaction@v3
+        with:
+          issue_message: |
+            Welcome to the Web Monetization community and thanks for filing this issue! :tada: We
+            will have a look at it shortly.
+
+            We would love to welcome you in our #web-monetization
+            [Slack channel](https://interledger.slack.com/join/shared_invite/zt-44g089zrn-XdSIiHF~cs8Oo_MBmSfECA#/shared-invite/email),
+            or the next [monthly Web Monetization call](https://github.com/WICG/webmonetization/tree/main#web-monetization-community-call)
+            for further collaboration! Don't hesitate to bring up questions you might have, and we're
+            happy to answer them.
+
+            If you haven't read it yet, we suggest to go through the
+            [contribution guidelines](https://github.com/interledger/publisher-tools/blob/main/docs/CONTRIBUTING.md)
+            for more information about contributing to this project.
+
+            Thank you again, and we're looking forward to seeing your continued contributions to Web Monetization!
+          pr_message: |
+            Welcome to the Web Monetization community and thanks for contributing this PR! :tada: We
+            will have a look at it shortly.
+
+            We would love to welcome you in our #web-monetization
+            [Slack channel](https://interledger.slack.com/join/shared_invite/zt-44g089zrn-XdSIiHF~cs8Oo_MBmSfECA#/shared-invite/email),
+            or the next [monthly Web Monetization call](https://github.com/WICG/webmonetization/tree/main#web-monetization-community-call)
+            for further collaboration! Don't hesitate to bring up questions you might have, and we're
+            happy to answer them.
+
+            If you haven't read it yet, we suggest to go through the
+            [contribution guidelines](https://github.com/interledger/publisher-tools/blob/main/docs/CONTRIBUTING.md)
+            for more information about contributing to this project. Please also make sure that you are complying
+            with the [AI policy](https://github.com/interledger/publisher-tools/blob/main/docs/AI_POLICY.md).
+
+            Thank you again, and we're looking forward to seeing your continued contributions to Web Monetization!
